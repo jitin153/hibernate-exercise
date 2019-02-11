@@ -37,7 +37,7 @@ public class StartMyApp {
 		 * Here we are saving only the user object not all the phones associated with
 		 * this user. Since we are using cascade hibernate will automatically save all
 		 * the phones associated with this user when it saves the user object itself.
-		 * Note that here calling persist method of session rather than save method.
+		 * Note that here we are calling persist method of session rather than save method.
 		 */
 		session.persist(user);
 		session.getTransaction().commit();

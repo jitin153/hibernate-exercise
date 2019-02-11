@@ -30,7 +30,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 /*
- * In order to work with hibernate you have to mark you model classes with @Entity.
+ * In order to work with hibernate you have to mark your model classes with @Entity.
  * If you're not providing any name to your entity class hibernate will automatically
  * create table into the database with same name as your entity. Eg. Teacher
  */
@@ -59,7 +59,7 @@ public class Teacher {
 	 * We can customize the column names into database by using this @Column
 	 * annotation.If you don't use @Column annotation hibernate will create column
 	 * into database with the same name as your field name. Eg. Id, but if you want
-	 * to change the column name into the database table, then you can for @Column
+	 * to change the column name into the database table, then you can go for @Column
 	 * annotation. Eg. Column name will be TEACHER_ID.
 	 */
 	@Column(name = "TEACHER_ID")
@@ -92,8 +92,8 @@ public class Teacher {
 
 	/*
 	 * Also we can use these annotations on the top of the getter. If you don't
-	 * annotate a field @Column, hibernate will automatically create column with the
-	 * same name as field.
+	 * annotate a field with @Column annotation, hibernate will automatically create column with the
+	 * same name as the field name.
 	 */
 
 	@Column(name = "TEACHER_NAME")
@@ -122,7 +122,7 @@ public class Teacher {
 	 * foreign key in that table & the value of this foreign key will always be the
 	 * same as teacher id(Primary key in TEACHER_INFO table). Table name will be your
 	 * entity name(TEACHER) appended with field name(addresses) by underscore(_)
-	 * symbol. Eg. Teacher_addresses & the foreign key column name will be you entity
+	 * symbol. Eg. Teacher_addresses & the foreign key column name will be your entity
 	 * name(Teacher) appended with the primary key column of your entity by a
 	 * underscore symbol. Eg. Teacher_TEACHER_ID
 	 */
@@ -142,7 +142,7 @@ public class Teacher {
 	/*
 	 * Here we are embedding our contact class. We'll get the phone & email column
 	 * into same TEACHER_INFO table. We can use this same Contact class as many times
-	 * we want. In our case we are using this Contact class twice in this Teacher
+	 * as we want. In our case we are using this Contact class twice in this Teacher
 	 * class, one for officeContact & another one is for personalContact. In order
 	 * to do that we have to override the attributes because we can't create same
 	 * column twice in a single table therefore we have to specify the different
@@ -208,7 +208,7 @@ public class Teacher {
 	 * By default hibernate creates varchar(255) for strings but what if we want to
 	 * store more than that. In order to do that we have to annotate our large
 	 * object as @Lob. We have two types or large objects : 1-CLOB & 2-BLOB. By
-	 * marking a field as @Lob we are telling hibernate to choose one these whether
+	 * marking a field as @Lob we are telling hibernate to choose one of these whether
 	 * its a character lob or a byte stream.
 	 */
 	@Lob

@@ -70,8 +70,8 @@ public class StartMyApp {
 		Phone phoneNokia = new Phone("Nokia", "Lumia");
 		List<Phone> phones = Arrays.asList(phoneSamsung, phoneNokia);
 		/*
-		 * To establish the one to many mapping with department we have to set this
-		 * department object into teacher object before saving it.
+		 * To establish the one to many mapping with phones we have to set this
+		 * phones object into teacher object before saving it.
 		 */
 		teacher.setPhones(phones);
 		/*
@@ -192,7 +192,7 @@ public class StartMyApp {
 		 * hibernate's default fetch strategy. Hibernate won't create unnecessary
 		 * queries to get the posts & address which are there in separate tables until &
 		 * unless we don't need them. If you need only posts but not addresses then
-		 * simply call the getPost() method or teacher object, you'll only get the
+		 * simply call the getPost() method of teacher object, you'll only get the
 		 * posts. If you want both posts & addresses then call both the getters of
 		 * teacher object. But if you want all the data every time for all the
 		 * collections, no matter how much data are there in the tables then you can go

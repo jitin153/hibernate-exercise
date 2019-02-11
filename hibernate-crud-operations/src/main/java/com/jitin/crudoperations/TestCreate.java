@@ -9,7 +9,7 @@ public class TestCreate {
 
 	public static void main(String[] args) {
 		/*
-		 * User user = new User("User", "Address"); is a transient object. When we this
+		 * User user = new User("User", "Address"); is a transient object. When we use this
 		 * object with session then it becomes persistent object.
 		 */
 		Session session = HibernateUtil.getSessionFactory().openSession();

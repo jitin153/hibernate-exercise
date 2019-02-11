@@ -15,7 +15,7 @@ public class Student {
 	private String name;
 
 	/*
-	 * Trying to achieve many to many relationship. Here are using mappedBy =
+	 * Trying to achieve many to many relationship. Here we are using mappedBy =
 	 * "students" because we have already mapped Student into Teacher. When we mark
 	 * any field as @ManyToMany it means that we are doing mapping or establishing a
 	 * relationship. Since we have already do this in our Teacher class therefore we
